@@ -74,6 +74,7 @@
 **4、运行结果** 
 
 ![7](https://github.com/xjc97/The_Three_Stooges/blob/master/homework/homework3/images/7.png)
+
 ![8](https://github.com/xjc97/The_Three_Stooges/blob/master/homework/homework3/images/8.png)
 
 观察运行结果，可以看到6个读线程同时读数据内容0，并且在读线程没结束之前写线程想要访问数据内容（比如writer(pthread_id:76777) try to write!），但因为互斥锁存在，保证了在读线程没结束前写线程不得访问数据内容。在6个读线程都退出后，写线程才开始写数据。  
@@ -117,6 +118,7 @@
 3.5、在主程序中先创建4个读线程，判断多个读者可以同时读数据集内容；然后创建2个读线程和3个写线程，判断是读线程优先还是写线程优先。
 
 ![14](https://github.com/xjc97/The_Three_Stooges/blob/master/homework/homework3/images/14.png) 
+
 ![15](https://github.com/xjc97/The_Three_Stooges/blob/master/homework/homework3/images/15.png)
 
 ****
@@ -124,7 +126,9 @@
 **4、运行结果** 
 
 ![16](https://github.com/xjc97/The_Three_Stooges/blob/master/homework/homework3/images/16.png)
+
 ![17](https://github.com/xjc97/The_Three_Stooges/blob/master/homework/homework3/images/17.png)
+
 ![18](https://github.com/xjc97/The_Three_Stooges/blob/master/homework/homework3/images/18.png)
 
 观察运行结果，可以看到先创建4个读线程可以同时读数据集内容，在等待的2个读线程和3个写线程中，写线程优先，在写线程完成后读线程才运行。
